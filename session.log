@@ -368,4 +368,27 @@ PID file: /var/run/dhcpd.pid
 git add fixed-configs evidence checker_result.txt session.log
 git commit -m "fix: complete DNS and DHCP repairs with full checker evidence"
 git push origin main
-[?2004l
+[?2004l[main 40bf6d3] fix: complete DNS and DHCP repairs with full checker evidence
+ 10 files changed, 446 insertions(+)
+ create mode 100644 checker_result.txt
+ create mode 100644 evidence/checker_after_fix4.txt
+ create mode 100644 evidence/dhcp_validation_after.txt
+ create mode 100644 evidence/dhcpd.conf.after
+ create mode 100644 evidence/dhcpd.conf.before
+ create mode 100644 fixed-configs/db.novapeak.lab.rev
+ create mode 100644 fixed-configs/dhcpd.conf
+ create mode 100644 fixed-configs/isc-dhcp-server
+ create mode 100644 fixed-configs/named.conf.options
+ create mode 100644 session.log
+Enumerating objects: 15, done.
+Counting objects:   6% (1/15)Counting objects:  13% (2/15)Counting objects:  20% (3/15)Counting objects:  26% (4/15)Counting objects:  33% (5/15)Counting objects:  40% (6/15)Counting objects:  46% (7/15)Counting objects:  53% (8/15)Counting objects:  60% (9/15)Counting objects:  66% (10/15)Counting objects:  73% (11/15)Counting objects:  80% (12/15)Counting objects:  86% (13/15)Counting objects:  93% (14/15)Counting objects: 100% (15/15)Counting objects: 100% (15/15), done.
+Compressing objects:   9% (1/11)Compressing objects:  18% (2/11)Compressing objects:  27% (3/11)Compressing objects:  36% (4/11)Compressing objects:  45% (5/11)Compressing objects:  54% (6/11)Compressing objects:  63% (7/11)Compressing objects:  72% (8/11)Compressing objects:  81% (9/11)Compressing objects:  90% (10/11)Compressing objects: 100% (11/11)Compressing objects: 100% (11/11), done.
+Writing objects:   8% (1/12)Writing objects:  16% (2/12)Writing objects:  25% (3/12)Writing objects:  33% (4/12)Writing objects:  41% (5/12)Writing objects:  50% (6/12)Writing objects:  58% (7/12)Writing objects:  66% (8/12)Writing objects:  75% (9/12)Writing objects:  83% (10/12)Writing objects:  91% (11/12)Writing objects: 100% (12/12)Writing objects: 100% (12/12), 7.96 KiB | 2.65 MiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 1 local object.[K
+To github.com:ria767-lab/server-os-midterm-group-DueTommor-.git
+   6731b94..40bf6d3  main -> main
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-10-18 11:04:53+00:00 [COMMAND_EXIT_CODE="0"]
