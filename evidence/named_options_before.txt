@@ -1,0 +1,6 @@
+     1	options {
+     2		directory "/var/cache/bind";
+     3		listen-on { any; };
+     4		allow-query { any; };
+     5		recursion no;
+     6	};

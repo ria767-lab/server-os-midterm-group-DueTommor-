@@ -1,0 +1,6 @@
+;; communications error to 192.168.19.10#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.8-Ubuntu <<>> @192.168.19.10 www.novapeak.lab +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
