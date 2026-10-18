@@ -1,0 +1,371 @@
+Script started on 2026-10-18 10:19:42+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="121" LINES="45"]
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~[00m$ [7mip -brief addr show lan0[27mip -brief addr show lan0
+[?2004llan0@if4         UP             192.168.19.10/24 fe80::b044:cfff:fee2:22ff/64 
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~[00m$ [7mip -brief addr show lan0[27mip -brief addr show lan0
+[?2004llan0@if4         UP             192.168.19.10/24 fe80::b044:cfff:fee2:22ff/64 
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~[00m$ [7mmkdir -p /root/.ssh && ssh-keygen -t ed25519 -f /root/.ssh/serveros_backup -N "" -C "killercoda-backup"[27m[01;32mroot@ubuntu[00m:[01;34m~[00m$ mkdir -p /root/.ssh && ssh-keygen -t ed25519 -f /root/.ssh/serveros_backup -N "" -C "killercoda-backup"
+[?2004lGenerating public/private ed25519 key pair.
+Your identification has been saved in /root/.ssh/serveros_backup
+Your public key has been saved in /root/.ssh/serveros_backup.pub
+The key fingerprint is:
+SHA256:LDW3JUTtOVKLikCmfzm6EjgAQSNHMYNxYapWJwyRSJQ killercoda-backup
+The key's randomart image is:
++--[ED25519 256]--+
+|O%&o     .o.     |
+|=E+oo    .  o    |
+|o  B .  o o+.o   |
+|o o +  o oo+=    |
+|oo . ..oS... .   |
+|+ . . =..        |
+| . . o .         |
+|  . .            |
+|   ...           |
++----[SHA256]-----+
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~[00m$ [K[7mcat /root/.ssh/serveros_backup.pub[27mcat /root/.ssh/serveros_backup.pub
+[?2004lssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMFf5sC3kG/PTSMBWpBOiUYJw7JJM2/DjaEdaDm+YI+x killercoda-backup
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~[00m$ [K[7mGIT_SSH_COMMAND='ssh -i /root/.ssh/serveros_backup -o IdentitiesOnly=yes' git clone git@github.com:ria767-[27m[7ml[27m[7mlab/server-os-midterm-group-DueTommor-.git /root/group-project[27m[A[01;32mroot@ubuntu[00m:[01;34m~[00m$ GIT_SSH_COMMAND='ssh -i /root/.ssh/serveros_backup -o IdentitiesOnly=yes' git clone git@github.com:ria767-lab/server-os-midterm-group-DueTommor-.git /root/group-project
+[?2004lCloning into '/root/group-project'...
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+remote: Enumerating objects: 7, done.[K
+remote: Counting objects:  14% (1/7)[Kremote: Counting objects:  28% (2/7)[Kremote: Counting objects:  42% (3/7)[Kremote: Counting objects:  57% (4/7)[Kremote: Counting objects:  71% (5/7)[Kremote: Counting objects:  85% (6/7)[Kremote: Counting objects: 100% (7/7)[Kremote: Counting objects: 100% (7/7), done.[K
+remote: Compressing objects:  16% (1/6)[Kremote: Compressing objects:  33% (2/6)[Kremote: Compressing objects:  50% (3/6)[Kremote: Compressing objects:  66% (4/6)[Kremote: Compressing objects:  83% (5/6)[Kremote: Compressing objects: 100% (6/6)[Kremote: Compressing objects: 100% (6/6), done.[K
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0 (from 0)[K
+Receiving objects:  14% (1/7)Receiving objects:  28% (2/7)Receiving objects:  42% (3/7)Receiving objects:  57% (4/7)Receiving objects:  71% (5/7)Receiving objects:  85% (6/7)Receiving objects: 100% (7/7)Receiving objects: 100% (7/7), done.
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~[00m$ [K[7mcd /root/group-project && git config core.sshCommand 'ssh -i /root/.ssh/serveros_backup -o IdentitiesOnly=[27m[7my[27m[7myes' && git status[27m[Acd /root/group-project && git config core.sshCommand 'ssh -i /root/.ssh/serveros_backup -o IdentitiesOnly=yes' && git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mgit config user.name[27mgit config user.name
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7mgit config user.email[27mgit config user.email
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7mgit config user.name "Ria"[27mgit config user.name "Ria"
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7mgit config user.name[27mgit config user.name
+[?2004lRia
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7mgit -C ~/Documents/server-os-midterm/server-os-midterm-group-DueTommor- config user.email[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ git -C ~/Documents/server-os-midterm/server-os-midterm-group-DueTommor- config user.email
+[?2004lfatal: cannot change to '/root/Documents/server-os-midterm/server-os-midterm-group-DueTommor-': No such file or directory
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mgit config user.email "YOUR_EMAIL_HERE"[27mgit config user.email "YOUR_EMAIL_HERE"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[7m312358738+ria767-lab@users.noreply.github.com[27m"312358738+ria767-lab@users.noreply.github.com
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mgit config user.email[27mgit config user.email
+[?2004l312358738+ria767-lab@users.noreply.github.com
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7mmkdir -p /root/group-project/evidence && python3 /root/grading/check_lab.py --group lab01 --[27m[7mp[27m[7mphase build | tee /root/group-project/evidence/checker_initial.txt[27m[Amkdir -p /root/group-project/evidence && python3 /root/grading/check_lab.py --group lab01 --phase build | tee /root/group-project/evidence/checker_initial.txt
+[?2004l  [   1/2 ] C4   named-checkconf -z FAILED; named-checkzone clean
+  [   2/2 ] C5   dhcpd -t clean; service running
+  [   0/2 ] C1   client cannot reach named at 192.168.19.10 (timeout/no status). Check listen-on, allow-query, firewall, and that it serves on lan0.
+  [ 0.0/3 ] C2   ns1 expected 192.168.19.10 got nothing; www expected 192.168.19.20 got nothing; mail expected 192.168.19.30 got nothing; api expected 192.168.19.40 got nothing
+  [   0/2 ] C3   reverse lookup of 192.168.19.10 did not return ns1 (got nothing). Check the reverse zone and its PTR.
+  [   3/3 ] C6   client obtained a lease: 192.168.19.104
+  [ 2.0/2 ] C7   pool+netmask correct
+  [   2/2 ] C8   gateway advertised correctly
+  [   0/3 ] C9   DHCP advertises 8.8.8.8, expected the company DNS 192.168.19.10 -- this is the integration the whole project is about
+  [   1/1 ] C10  company domain advertised
+  [   0/3 ] C11  using the leased resolver 8.8.8.8, www did not resolve to 192.168.19.20 (got nothing). If the leased resolver is a public one, that is the integration bug.
+  --------------------------------------------------
+  TOTAL: 11.0 / 25
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mgit add evidence/checker_initial.txt && git commit -m "evidence: record initial DNS and DHCP[27m[7m [27m[7m failures" && git push origin main[27m[Agit add evidence/checker_initial.txt && git commit -m "evidence: record initial DNS and DHCP failures" && git push origin main
+[?2004l[main 43309f5] evidence: record initial DNS and DHCP failures
+ 1 file changed, 13 insertions(+)
+ create mode 100644 evidence/checker_initial.txt
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 881 bytes | 881.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:ria767-lab/server-os-midterm-group-DueTommor-.git
+   e8596fc..43309f5  main -> main
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mnamed-checkconf -z[27mnamed-checkconf -z
+[?2004lzone novapeak.lab/IN: loading from master file /etc/bind/db.MISSING failed: file not found
+zone novapeak.lab/IN: not loaded due to errors.
+_default/novapeak.lab/IN: file not found
+zone 19.168.192.in-addr.arpa/IN: loaded serial 2024010101
+zone localhost/IN: loaded serial 2
+zone 127.in-addr.arpa/IN: loaded serial 1
+zone 0.in-addr.arpa/IN: loaded serial 1
+zone 255.in-addr.arpa/IN: loaded serial 1
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7mcat -n /etc/bind/named.conf.local[27mcat -n /etc/bind/named.conf.local
+[?2004l     1	zone "novapeak.lab" {
+     2		type master;
+     3		file "/etc/bind/db.MISSING";
+     4	};
+     5	
+     6	zone "19.168.192.in-addr.arpa" {
+     7		type master;
+     8		file "/etc/bind/db.novapeak.lab.rev";
+     9	};
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mnamed-checkzone novapeak.lab /etc/bind/db.novapeak.lab[27mnamed-checkzone novapeak.lab /etc/bind/db.novapeak.lab
+[?2004lzone novapeak.lab/IN: loaded serial 2024010101
+OK
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7msed -i.bak 's|db.MISSING|db.novapeak.lab|' /etc/bind/named.conf.local[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ sed -i.bak 's|db.MISSING|db.novapeak.lab|' /etc/bind/named.conf.local
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mnamed-checkconf -z[27mnamed-checkconf -z
+[?2004lzone novapeak.lab/IN: loaded serial 2024010101
+zone 19.168.192.in-addr.arpa/IN: loaded serial 2024010101
+zone localhost/IN: loaded serial 2
+zone 127.in-addr.arpa/IN: loaded serial 1
+zone 0.in-addr.arpa/IN: loaded serial 1
+zone 255.in-addr.arpa/IN: loaded serial 1
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [7msystemctl restart named && systemctl is-active named[27msystemctl restart named && systemctl is-active named
+[?2004lactive
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mpython3 /root/grading/check_lab.py --group lab01 --phase build | tee /root/group-project/evi[27m[7md[27m[7mdence/checker_after_fix1.txt[27m[A python3 /root/grading/check_lab.py --group lab01 --phase build | tee /root/group-project/evidence/checker_after_fix1.txt
+[?2004l  [   2/2 ] C4   named-checkconf -z clean; named-checkzone clean
+  [   2/2 ] C5   dhcpd -t clean; service running
+  [   0/2 ] C1   client cannot reach named at 192.168.19.10 (timeout/no status). Check listen-on, allow-query, firewall, and that it serves on lan0.
+  [ 0.0/3 ] C2   ns1 expected 192.168.19.10 got nothing; www expected 192.168.19.20 got nothing; mail expected 192.168.19.30 got nothing; api expected 192.168.19.40 got nothing
+  [   0/2 ] C3   reverse lookup of 192.168.19.10 did not return ns1 (got nothing). Check the reverse zone and its PTR.
+  [   3/3 ] C6   client obtained a lease: 192.168.19.104
+  [ 2.0/2 ] C7   pool+netmask correct
+  [   2/2 ] C8   gateway advertised correctly
+  [   0/3 ] C9   DHCP advertises 8.8.8.8, expected the company DNS 192.168.19.10 -- this is the integration the whole project is about
+  [   1/1 ] C10  company domain advertised
+  [   0/3 ] C11  using the leased resolver 8.8.8.8, www did not resolve to 192.168.19.20 (got nothing). If the leased resolver is a public one, that is the integration bug.
+  --------------------------------------------------
+  TOTAL: 12.0 / 25
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mls -l /etc/bind/named.conf.local.bak[27mls -l /etc/bind/named.conf.local.bak
+[?2004l-rw-r--r-- 1 root bind 159 Oct 18 10:19 [0m[00;90m/etc/bind/named.conf.local.bak[0m
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mmkdir -p evidence fixed-configs[27m
+[7mcp /etc/bind/named.conf.local.bak evidence/named.conf.local.before[27m
+[7mcp /etc/bind/named.conf.local evidence/named.conf.local.after[27m
+[7mcp /etc/bind/named.conf.local fixed-configs/named.conf.local[27m
+[7mgit status[27m[A[A[A[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ mkdir -p evidence fixed-configs
+cp /etc/bind/named.conf.local.bak evidence/named.conf.local.before
+cp /etc/bind/named.conf.local evidence/named.conf.local.after
+cp /etc/bind/named.conf.local fixed-configs/named.conf.local
+git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mevidence/checker_after_fix1.txt[m
+	[31mevidence/named.conf.local.after[m
+	[31mevidence/named.conf.local.before[m
+	[31mfixed-configs/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mgit add evidence/checker_after_fix1.txt evidence/named.conf.local.before evidence/named.conf[27m[7m.[27m[7m.local.after fixed-configs/named.conf.local && git commit -m "fix: correct DNS forward zone path with before-after eviden[27m[7mc[27m[7mce" && git push origin main[27m[A[A$ git add evidence/checker_after_fix1.txt evidence/named.conf.local.before evidence/named.conf.local.after fixed-configs/named.conf.local && git commit -m "fix: correct DNS forward zone path with before-after evidence" && git push origin main
+[?2004l[main ea00cb0] fix: correct DNS forward zone path with before-after evidence
+ 4 files changed, 40 insertions(+)
+ create mode 100644 evidence/checker_after_fix1.txt
+ create mode 100644 evidence/named.conf.local.after
+ create mode 100644 evidence/named.conf.local.before
+ create mode 100644 fixed-configs/named.conf.local
+Enumerating objects: 9, done.
+Counting objects:  11% (1/9)Counting objects:  22% (2/9)Counting objects:  33% (3/9)Counting objects:  44% (4/9)Counting objects:  55% (5/9)Counting objects:  66% (6/9)Counting objects:  77% (7/9)Counting objects:  88% (8/9)Counting objects: 100% (9/9)Counting objects: 100% (9/9), done.
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  14% (1/7)Writing objects:  28% (2/7)Writing objects:  42% (3/7)Writing objects:  57% (4/7)Writing objects:  71% (5/7)Writing objects:  85% (6/7)Writing objects: 100% (7/7)Writing objects: 100% (7/7), 1.17 KiB | 1.17 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 1 local object.[K
+To github.com:ria767-lab/server-os-midterm-group-DueTommor-.git
+   43309f5..ea00cb0  main -> main
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mcat -n /etc/bind/named.conf.options | tee evidence/named_options_before.txt[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ cat -n /etc/bind/named.conf.options | tee evidence/named_options_before.txt
+[?2004l     1	options {
+     2		directory "/var/cache/bind";
+     3		listen-on { any; };
+     4		allow-query { any; };
+     5		recursion no;
+     6	};
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mss -lntup | grep ':53' | tee evidence/dns_listeners_before.txt[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ ss -lntup | grep ':53' | tee evidence/dns_listeners_before.txt
+[?2004ludp   UNCONN 0      0                           192.168.19.10:53         0.0.0.0:*    users:(("named",pid=3003,fd=25))                      
+udp   UNCONN 0      0                              172.17.0.1:53         0.0.0.0:*    users:(("named",pid=3003,fd=23))                      
+udp   UNCONN 0      0                              172.30.1.2:53         0.0.0.0:*    users:(("named",pid=3003,fd=21))                      
+udp   UNCONN 0      0                               127.0.0.1:53         0.0.0.0:*    users:(("named",pid=3003,fd=18))                      
+udp   UNCONN 0      0                              127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=1204,fd=16))            
+udp   UNCONN 0      0                           127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=1204,fd=14))            
+udp   UNCONN 0      0                                   [::1]:53            [::]:*    users:(("named",pid=3003,fd=27))                      
+udp   UNCONN 0      0      [fe80::57f3:be75:5b72:8de7]%enp1s0:53            [::]:*    users:(("named",pid=3003,fd=29))                      
+udp   UNCONN 0      0        [fe80::b044:cfff:fee2:22ff]%lan0:53            [::]:*    users:(("named",pid=3003,fd=31))                      
+tcp   LISTEN 0      10                              127.0.0.1:53         0.0.0.0:*    users:(("named",pid=3003,fd=19))                      
+tcp   LISTEN 0      10                          192.168.19.10:53         0.0.0.0:*    users:(("named",pid=3003,fd=26))                      
+tcp   LISTEN 0      10                             172.30.1.2:53         0.0.0.0:*    users:(("named",pid=3003,fd=22))                      
+tcp   LISTEN 0      10                             172.17.0.1:53         0.0.0.0:*    users:(("named",pid=3003,fd=24))                      
+tcp   LISTEN 0      4096                        127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=1204,fd=15))            
+tcp   LISTEN 0      4096                           127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=1204,fd=17))            
+tcp   LISTEN 0      10                                  [::1]:53            [::]:*    users:(("named",pid=3003,fd=28))                      
+tcp   LISTEN 0      10     [fe80::57f3:be75:5b72:8de7]%enp1s0:53            [::]:*    users:(("named",pid=3003,fd=30))                      
+tcp   LISTEN 0      10       [fe80::b044:cfff:fee2:22ff]%lan0:53            [::]:*    users:(("named",pid=3003,fd=32))                      
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mip netns exec client dig @192.168.19.10 www.novapeak.lab +time=2 +tries=1 2>&1 | tee evidenc[27m[7me[27m[7me/dns_client_before.txt[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ ip netns exec client dig @192.168.19.10 www.novapeak.lab +time=2 +tries=1 2>&1 | tee evidence/dns_client_before.txt
+[?2004l;; communications error to 192.168.19.10#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.8-Ubuntu <<>> @192.168.19.10 www.novapeak.lab +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7miptables -S | tee evidence/iptables_before.txt[27miptables -S | tee evidence/iptables_before.txt
+[?2004l-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-BRIDGE
+-N DOCKER-CT
+-N DOCKER-FORWARD
+-N DOCKER-INTERNAL
+-N DOCKER-USER
+-A INPUT -p udp -m udp --dport 53 -j DROP
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-FORWARD
+-A DOCKER ! -i docker0 -o docker0 -j DROP
+-A DOCKER-BRIDGE -o docker0 -j DOCKER
+-A DOCKER-CT -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A DOCKER-FORWARD -j DOCKER-CT
+-A DOCKER-FORWARD -j DOCKER-INTERNAL
+-A DOCKER-FORWARD -j DOCKER-BRIDGE
+-A DOCKER-FORWARD -i docker0 -j ACCEPT
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7miptables -D INPUT -p udp -m udp --dport 53 -j DROP[27miptables -D INPUT -p udp -m udp --dport 53 -j DROP
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mip netns exec client dig @192.168.19.10 www.novapeak.lab +time=2 +tries=1 2>&1 | tee evidenc[27m[7me[27m[7me/dns_client_after.txt[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ ip netns exec client dig @192.168.19.10 www.novapeak.lab +time=2 +tries=1 2>&1 | tee evidence/dns_client_after.txt
+[?2004l
+; <<>> DiG 9.18.39-0ubuntu0.24.04.8-Ubuntu <<>> @192.168.19.10 www.novapeak.lab +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62725
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: fa3c942d55cf5e78010000006ad4a422e20490aa4a7173f1 (good)
+;; QUESTION SECTION:
+;www.novapeak.lab.		IN	A
+
+;; ANSWER SECTION:
+www.novapeak.lab.	3600	IN	A	192.168.19.20
+
+;; Query time: 0 msec
+;; SERVER: 192.168.19.10#53(192.168.19.10) (UDP)
+;; WHEN: Sun Oct 18 10:49:06 UTC 2026
+;; MSG SIZE  rcvd: 89
+
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mpython3 /root/grading/check_lab.py --group lab01 --phase build | tee evidence/checker_after_[27m[7mf[27m[7mfix2.txt[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ python3 /root/grading/check_lab.py --group lab01 --phase build | tee evidence/checker_after_fix2.txt
+[?2004l  [   2/2 ] C4   named-checkconf -z clean; named-checkzone clean
+  [   2/2 ] C5   dhcpd -t clean; service running
+  [   2/2 ] C1   named is authoritative for novapeak.lab and reachable from the client.
+  [2.25/3 ] C2   api expected 192.168.19.40 got ['192.168.19.1']
+  [   2/2 ] C3   reverse lookup of 192.168.19.10 returns ns1.
+  [   3/3 ] C6   client obtained a lease: 192.168.19.104
+  [ 2.0/2 ] C7   pool+netmask correct
+  [   2/2 ] C8   gateway advertised correctly
+  [   0/3 ] C9   DHCP advertises 8.8.8.8, expected the company DNS 192.168.19.10 -- this is the integration the whole project is about
+  [   1/1 ] C10  company domain advertised
+  [   0/3 ] C11  using the leased resolver 8.8.8.8, www did not resolve to 192.168.19.20 (got nothing). If the leased resolver is a public one, that is the integration bug.
+  --------------------------------------------------
+  TOTAL: 18.25 / 25
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7miptables -S | tee evidence/iptables_after.txt[27miptables -S | tee evidence/iptables_after.txt
+[?2004l-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-BRIDGE
+-N DOCKER-CT
+-N DOCKER-FORWARD
+-N DOCKER-INTERNAL
+-N DOCKER-USER
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-FORWARD
+-A DOCKER ! -i docker0 -o docker0 -j DROP
+-A DOCKER-BRIDGE -o docker0 -j DOCKER
+-A DOCKER-CT -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A DOCKER-FORWARD -j DOCKER-CT
+-A DOCKER-FORWARD -j DOCKER-INTERNAL
+-A DOCKER-FORWARD -j DOCKER-BRIDGE
+-A DOCKER-FORWARD -i docker0 -j ACCEPT
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mgit add evidence/ && git commit -m "evidence: document DNS firewall fault before and after" [27m[7m&[27m[7m&& git push origin main[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ git add evidence/ && git commit -m "evidence: document DNS firewall fault before and after" && git push origin main
+[?2004l[main 36bcd59] evidence: document DNS firewall fault before and after
+ 7 files changed, 103 insertions(+)
+ create mode 100644 evidence/checker_after_fix2.txt
+ create mode 100644 evidence/dns_client_after.txt
+ create mode 100644 evidence/dns_client_before.txt
+ create mode 100644 evidence/dns_listeners_before.txt
+ create mode 100644 evidence/iptables_after.txt
+ create mode 100644 evidence/iptables_before.txt
+ create mode 100644 evidence/named_options_before.txt
+Enumerating objects: 12, done.
+Counting objects:   8% (1/12)Counting objects:  16% (2/12)Counting objects:  25% (3/12)Counting objects:  33% (4/12)Counting objects:  41% (5/12)Counting objects:  50% (6/12)Counting objects:  58% (7/12)Counting objects:  66% (8/12)Counting objects:  75% (9/12)Counting objects:  83% (10/12)Counting objects:  91% (11/12)Counting objects: 100% (12/12)Counting objects: 100% (12/12), done.
+Compressing objects:  10% (1/10)Compressing objects:  20% (2/10)Compressing objects:  30% (3/10)Compressing objects:  40% (4/10)Compressing objects:  50% (5/10)Compressing objects:  60% (6/10)Compressing objects:  70% (7/10)Compressing objects:  80% (8/10)Compressing objects:  90% (9/10)Compressing objects: 100% (10/10)Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)Writing objects:  20% (2/10)Writing objects:  30% (3/10)Writing objects:  40% (4/10)Writing objects:  50% (5/10)Writing objects:  60% (6/10)Writing objects:  70% (7/10)Writing objects:  80% (8/10)Writing objects:  90% (9/10)Writing objects: 100% (10/10)Writing objects: 100% (10/10), 2.35 KiB | 2.35 MiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 1 local object.[K
+To github.com:ria767-lab/server-os-midterm-group-DueTommor-.git
+   ea00cb0..36bcd59  main -> main
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mcp /etc/bind/db.novapeak.lab evidence/db.novapeak.lab.before && cat -n /etc/bind/db.novapeak[27m[7m.[27m[7m.lab[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ cp /etc/bind/db.novapeak.lab evidence/db.novapeak.lab.before && cat -n /etc/bind/db.novapeak.lab
+[?2004l     1	$TTL 3600
+     2	@ IN SOA ns1.novapeak.lab. admin.novapeak.lab. ( 2024010101 3600 1800 604800 3600 )
+     3	@ IN NS ns1.novapeak.lab.
+     4	ns1 IN A 192.168.19.10
+     5	www IN A 192.168.19.20
+     6	mail IN A 192.168.19.30
+     7	api IN A 192.168.19.1
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7msed -i 's/api IN A 192.168.19.1$/api IN A 192.168.19.40/; s/2024010101/2024010102/' /etc/bin[27m[7md[27m[7md/db.novapeak.lab[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ sed -i 's/api IN A 192.168.19.1$/api IN A 192.168.19.40/; s/2024010101/2024010102/' /etc/bind/db.novapeak.lab
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mnamed-checkzone novapeak.lab /etc/bind/db.novapeak.lab | tee evidence/api_zone_validation_af[27m[7mt[27m[7mter.txt[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ named-checkzone novapeak.lab /etc/bind/db.novapeak.lab | tee evidence/api_zone_validation_after.txt
+[?2004lzone novapeak.lab/IN: loaded serial 2024010102
+OK
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7msystemctl reload named && ip netns exec client dig @192.168.19.10 api.novapeak.lab +noall +a[27m[7mn[27m[7mnswer | tee evidence/api_dns_after.txt[27m[Asystemctl reload named && ip netns exec client dig @192.168.19.10 api.novapeak.lab +noall +answer | tee evidence/api_dns_after.txt
+[?2004lapi.novapeak.lab.	3600	IN	A	192.168.19.40
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mcp /etc/bind/db.novapeak.lab evidence/db.novapeak.lab.after && cp /etc/bind/db.novapeak.lab [27m[7mf[27m[7mfixed-configs/db.novapeak.lab && git add evidence/ fixed-configs/ && git commit -m "fix: correct API DNS record with befo[27m[7mr[27m[7mre-after evidence" && git push origin main[27m[A[Acp /etc/bind/db.novapeak.lab evidence/db.novapeak.lab.after && cp /etc/bind/db.novapeak.lab fixed-configs/db.novapeak.lab && git add evidence/ fixed-configs/ && git commit -m "fix: correct API DNS record with before-after evidence" && git push origin main
+[?2004l[main 6731b94] fix: correct API DNS record with before-after evidence
+ 5 files changed, 24 insertions(+)
+ create mode 100644 evidence/api_dns_after.txt
+ create mode 100644 evidence/api_zone_validation_after.txt
+ create mode 100644 evidence/db.novapeak.lab.after
+ create mode 100644 evidence/db.novapeak.lab.before
+ create mode 100644 fixed-configs/db.novapeak.lab
+Enumerating objects: 11, done.
+Counting objects:   9% (1/11)Counting objects:  18% (2/11)Counting objects:  27% (3/11)Counting objects:  36% (4/11)Counting objects:  45% (5/11)Counting objects:  54% (6/11)Counting objects:  63% (7/11)Counting objects:  72% (8/11)Counting objects:  81% (9/11)Counting objects:  90% (10/11)Counting objects: 100% (11/11)Counting objects: 100% (11/11), done.
+Compressing objects:  14% (1/7)Compressing objects:  28% (2/7)Compressing objects:  42% (3/7)Compressing objects:  57% (4/7)Compressing objects:  71% (5/7)Compressing objects:  85% (6/7)Compressing objects: 100% (7/7)Compressing objects: 100% (7/7), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 897 bytes | 897.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 2 local objects.[K
+To github.com:ria767-lab/server-os-midterm-group-DueTommor-.git
+   36bcd59..6731b94  main -> main
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mcp /etc/dhcp/dhcpd.conf evidence/dhcpd.conf.before && cat -n /etc/dhcp/dhcpd.conf[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ cp /etc/dhcp/dhcpd.conf evidence/dhcpd.conf.before && cat -n /etc/dhcp/dhcpd.conf
+[?2004l     1	option domain-name "novapeak.lab";
+     2	default-lease-time 3600;
+     3	max-lease-time 7200;
+     4	
+     5	subnet 192.168.19.0 netmask 255.255.255.0 {
+     6		range 192.168.19.104 192.168.19.144;
+     7		option routers 192.168.19.1;
+     8		option domain-name-servers 8.8.8.8;
+     9	}
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7msed -i.bak 's/option domain-name-servers 8\.8\.8\.8;/option domain-name-servers 192.168.19.1[27m[7m0[27m[7m0;/' /etc/dhcp/dhcpd.conf[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ sed -i.bak 's/option domain-name-servers 8\.8\.8\.8;/option domain-name-servers 192.168.19.10;/' /etc/dhcp/dhcpd.conf
+[?2004l[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mdhcpd -t -cf /etc/dhcp/dhcpd.conf 2>&1 | tee evidence/dhcp_validation_after.txt[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ dhcpd -t -cf /etc/dhcp/dhcpd.conf 2>&1 | tee evidence/dhcp_validation_after.txt
+[?2004lInternet Systems Consortium DHCP Server 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7msystemctl restart isc-dhcp-server && systemctl is-active isc-dhcp-server[27m[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ systemctl restart isc-dhcp-server && systemctl is-active isc-dhcp-server
+[?2004lactive
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mpython3 /root/grading/check_lab.py --group lab01 --phase build | tee evidence/checker_after_[27m[7mf[27m[7mfix4.txt[27m[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ python3 /root/grading/check_lab.py --group lab01 --phase build | tee evidence/checker_after_fix4.txt
+[?2004l  [   2/2 ] C4   named-checkconf -z clean; named-checkzone clean
+  [   2/2 ] C5   dhcpd -t clean; service running
+  [   2/2 ] C1   named is authoritative for novapeak.lab and reachable from the client.
+  [ 3.0/3 ] C2   all four A records correct
+  [   2/2 ] C3   reverse lookup of 192.168.19.10 returns ns1.
+  [   3/3 ] C6   client obtained a lease: 192.168.19.104
+  [ 2.0/2 ] C7   pool+netmask correct
+  [   2/2 ] C8   gateway advertised correctly
+  [   3/3 ] C9   DHCP advertises the company DNS (192.168.19.10)
+  [   1/1 ] C10  company domain advertised
+  [   3/3 ] C11  client resolves www via the leased resolver
+  --------------------------------------------------
+  TOTAL: 25.0 / 25
+[?2004h[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ [K[7mcp /etc/bind/named.conf.options /etc/bind/named.conf.local /etc/bind/db.novapeak.lab /etc/bi[27m[7mn[27m[7mnd/db.novapeak.lab.rev fixed-configs/[27m
+[7mcp /etc/dhcp/dhcpd.conf /etc/default/isc-dhcp-server fixed-configs/[27m
+[7mcp /etc/dhcp/dhcpd.conf evidence/dhcpd.conf.after[27m
+[7mcp evidence/checker_after_fix4.txt checker_result.txt[27m
+[7mcp /root/session.log session.log[27m
+[7mgit add fixed-configs evidence checker_result.txt session.log[27m
+[7mgit commit -m "fix: complete DNS and DHCP repairs with full checker evidence"[27m
+[7mgit push origin main[27m[A[A[A[A[A[A[A[A[01;32mroot@ubuntu[00m:[01;34m~/group-project[00m$ cp /etc/bind/named.conf.options /etc/bind/named.conf.local /etc/bind/db.novapeak.lab /etc/bind/db.novapeak.lab.rev fixed-configs/
+cp /etc/dhcp/dhcpd.conf /etc/default/isc-dhcp-server fixed-configs/
+cp /etc/dhcp/dhcpd.conf evidence/dhcpd.conf.after
+cp evidence/checker_after_fix4.txt checker_result.txt
+cp /root/session.log session.log
+git add fixed-configs evidence checker_result.txt session.log
+git commit -m "fix: complete DNS and DHCP repairs with full checker evidence"
+git push origin main
+[?2004l
