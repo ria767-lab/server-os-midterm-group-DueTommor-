@@ -1,10 +1,17 @@
 # AI Usage and Critique
 
 Group: [DueTomorrow]
-Members: [ Ria-6705142022 ], 
-[Eaint Kyar Phyu Linn-6705142010], [Chit Myat Noe-6705142017],
+
+Members: [ Ria-6705142022 ],
+
+[Eaint Kyar Phyu Linn-6705142010],
+
+[Chit Myat Noe-6705142017],
+
 [Hnin Ei Ei Win-6705142036],
+
 [Aung Thet Khine-6705142032]
+
 Company/domain:  NovaPeak / novapeak.lab
 
 ## Part 3a: Declaration (required)
