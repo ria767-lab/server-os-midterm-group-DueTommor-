@@ -142,3 +142,164 @@
   The client successfully received the correct IP address for `www.novapeak.lab`. The grading checker also improved to 18.25/25 after this repair, confirming that DNS communication was working.
 
 - **Found/proved by:** [Aung Thet Khine - 6705142032]
+
+---
+
+## Fault 3 — Incorrect API DNS Address
+
+- **Symptom (what we observed):**
+
+  The API DNS record had the wrong IP address. It was pointing to `192.168.19.1`, which is the gateway address, instead of the required API server address `192.168.19.40`.
+
+  We checked the DNS zone file using:
+
+  `cat /etc/bind/db.novapeak.lab`
+
+  Relevant output:
+
+  ```
+  ns1 IN A 192.168.19.10
+  www IN A 192.168.19.20
+  mail IN A 192.168.19.30
+  api IN A 192.168.19.1
+  ```
+
+- **Hypothesis (what we suspected and why):**
+
+  We suspected that the API A record was configured with the wrong IP address. The API hostname should point to `192.168.19.40`, but the zone file showed `192.168.19.1`.
+
+- **Proof (the command that confirmed the cause):**
+
+  `cat /etc/bind/db.novapeak.lab`
+
+  Relevant output:
+
+  ```
+  api IN A 192.168.19.1
+  ```
+
+  This confirmed that the API DNS record was pointing to the wrong IP address.
+
+- **Fix (what we changed):**
+
+  We changed the API A record from `192.168.19.1` to `192.168.19.40` using the following command:
+
+  ```
+  sed -i 's/^api IN A 192\.168\.19\.1$/api IN A 192.168.19.40/' /etc/bind/db.novapeak.lab
+  ```
+
+  We also updated the zone serial number:
+
+  ```
+  sed -i 's/2024010101/2026101401/' /etc/bind/db.novapeak.lab
+  ```
+
+  Then we checked the DNS configuration and restarted the DNS service.
+
+  ```
+  named-checkconf -z
+  systemctl restart named
+  ```
+
+- **Confirmation (output showing it now works):**
+
+  We checked the DNS zone file again.
+
+  `cat /etc/bind/db.novapeak.lab`
+
+  Relevant output:
+
+  ```
+  api IN A 192.168.19.40
+  ```
+
+  After the firewall issue was also resolved, we tested the API DNS record using:
+
+  `dig @192.168.19.10 api.novapeak.lab +short`
+
+  Output:
+
+  ```
+  192.168.19.40
+  ```
+
+  The API hostname successfully resolved to the correct IP address. The final grading checker also confirmed that all four A records were correct.
+
+- **Found/proved by:** [Hnin Ei Ei Win - 6705142036]
+
+---
+
+## Fault 4 — Incorrect DHCP DNS Server
+
+- **Symptom (what we observed):**
+
+  The DHCP server was advertising the wrong DNS server address. Instead of using the company's DNS server `192.168.19.10`, it was giving clients the public DNS server `8.8.8.8`.
+
+  The initial grading checker showed:
+
+  ```
+  [ 0/3 ] C9 DHCP advertises 8.8.8.8,
+  expected the company DNS 192.168.19.10
+  ```
+
+- **Hypothesis (what we suspected and why):**
+
+  We suspected that the DHCP configuration contained the wrong DNS server address. Since the company uses the internal domain `novapeak.lab`, clients need to use the company's DNS server to resolve internal hostnames.
+
+- **Proof (the command that confirmed the cause):**
+
+  `grep -n "domain-name-servers" /etc/dhcp/dhcpd.conf`
+
+  Output:
+
+  ```
+  8:      option domain-name-servers 8.8.8.8;
+  ```
+
+  This confirmed that the DHCP server was configured to advertise the wrong DNS address.
+
+- **Fix (what we changed):**
+
+  We changed the DHCP DNS server address from `8.8.8.8` to `192.168.19.10` using the following command:
+
+  ```
+  sed -i 's/option domain-name-servers 8\.8\.8\.8;/option domain-name-servers 192.168.19.10;/' /etc/dhcp/dhcpd.conf
+  ```
+
+  We then checked the DHCP configuration using:
+
+  `dhcpd -t -cf /etc/dhcp/dhcpd.conf`
+
+  After the configuration passed validation, we restarted the DHCP service.
+
+  `systemctl restart isc-dhcp-server`
+
+- **Confirmation (output showing it now works):**
+
+  We checked the DHCP configuration again.
+
+  `cat /etc/dhcp/dhcpd.conf`
+
+  Relevant output:
+
+  ```
+  subnet 192.168.19.0 netmask 255.255.255.0 {
+      range 192.168.19.104 192.168.19.144;
+      option routers 192.168.19.1;
+      option domain-name-servers 192.168.19.10;
+  }
+  ```
+
+  We also ran the grading checker to verify the result.
+
+  `python3 /root/grading/check_lab.py --group lab01 --phase build`
+
+  Relevant output:
+
+  ```
+  [ 3/3 ] C9 DHCP advertises the company DNS (192.168.19.10)
+  ```
+
+  The DHCP server successfully advertised the correct company DNS address. After the remaining DNS and firewall problems were resolved, the client could also resolve the company website using the DHCP-provided DNS server.
+
+- **Found/proved by:** [Hnin Ei Ei Win - 6705142036]
