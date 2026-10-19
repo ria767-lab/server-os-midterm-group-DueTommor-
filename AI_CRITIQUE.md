@@ -35,7 +35,7 @@ We verified the repairs using the client-side checker, which reached 25/25. Our 
 We gave Codex our terminal outputs while investigating the lab. After fixing the problems, we gave Gemini a description of the four faults and their evidence. The tools received different inputs at different times, so this was not an equal test of independent diagnosis.
 
 
-| Fault (in our words) | We found it? | AI #1 (<name>) | AI #2 (<name>) | Was each AI actually right? |
+| Fault (in our words) | We found it? | AI #1 (OpenAI Codex) | AI #2 (Google Gemini) | Was each AI actually right? |
 | --- | --- | --- | --- | --- |
 | DNS pointed to the missing file `db.MISSING`. | We confirmed it using commands suggested by Codex. | Change the path to `db.novapeak.lab`, validate, and restart DNS. | Change the same path and reload BIND. | Both gave the correct file change. After our repair, C4 passed and the score increased from 11 to 12. We did not test Gemini’s exact reload command. |
 | A firewall rule blocked UDP port 53. | We checked the listeners and firewall rule with Codex’s help. | Remove the specific DROP rule. | Remove the rule, or add an ACCEPT/UFW rule. | Removing the rule worked. Client DNS became reachable, and the score reached 18.25. We did not test Gemini’s alternatives. |
