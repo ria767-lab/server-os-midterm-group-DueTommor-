@@ -1,13 +1,18 @@
 # AI Usage and Critique
 
 Group: [DueTomorrow]
+<<<<<<< HEAD
 
 Members: [ Ria-6705142022 ],
 
 [Eaint Kyar Phyu Linn-6705142010],
 
 [Chit Myat Noe-6705142017],
-
+=======
+Members: [ Ria-6705142022 ], 
+[Eaint Kyar Phyu Linn-6705142010], 
+[Chit Myat Noe-6705142017],
+>>>>>>> 04cac5f (fix AI comparison table formatting)
 [Hnin Ei Ei Win-6705142036],
 
 [Aung Thet Khine-6705142032]
@@ -39,9 +44,6 @@ We gave Codex our terminal outputs while investigating the lab. After fixing the
 
 | Fault (in our words) | We found it? | AI #1 (<name>) | AI #2 (<name>) | Was each AI actually right? |
 | --- | --- | --- | --- | --- |
-| | | | | |
-| | | | | |
-
 | DNS pointed to the missing file `db.MISSING`. | We confirmed it using commands suggested by Codex. | Change the path to `db.novapeak.lab`, validate, and restart DNS. | Change the same path and reload BIND. | Both gave the correct file change. After our repair, C4 passed and the score increased from 11 to 12. We did not test Gemini’s exact reload command. |
 | A firewall rule blocked UDP port 53. | We checked the listeners and firewall rule with Codex’s help. | Remove the specific DROP rule. | Remove the rule, or add an ACCEPT/UFW rule. | Removing the rule worked. Client DNS became reachable, and the score reached 18.25. We did not test Gemini’s alternatives. |
 | The API record had the wrong IP address. | We confirmed it by checking the zone file and checker output. | Change the address to `192.168.19.40`, increase the serial, and restart DNS. | Make the same correction and reload the zone. | Both suggested the correct address. C2 passed and the score reached 19. Gemini’s reload command was not tested. |
