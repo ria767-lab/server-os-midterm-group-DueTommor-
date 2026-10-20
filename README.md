@@ -27,3 +27,13 @@ All group members participated in the Killercoda lab tasks and contributed to th
 | Aung Thet Khine (@AungThetKhine21) | Worked on Faults 1 and 2: the DNS zone file path and firewall configuration. |
 | Hnin Ei Ei Win (@winniehnin) | Worked on Faults 3 and 4: the API DNS record and DHCP DNS configuration. |
 | Eaint Kyar Phyu Linn (@Eaint-kpl) | Prepared and improved the README and checked the repository for documentation errors and inconsistencies. |
+
+## Project Overview
+
+This project focuses on diagnosing and repairing DNS and DHCP services in a simulated company network as part of the Server Operating System midterm.
+
+The goal is to ensure that a client joining the network without manual configuration can obtain its network settings through DHCP and resolve the company's internal hostnames using the correct DNS server.
+
+The group investigated network and configuration problems, collected command outputs as evidence, applied repairs, and verified the results using the client-side grading checker.
+
+The project also includes an incident log documenting the troubleshooting process and an AI critique evaluating the usefulness and limitations of AI-assisted troubleshooting.
