@@ -10,8 +10,8 @@ Server Operating System Midterm Project - DNS and DHCP Troubleshooting
 
 ## Group Members
 
-- Ria — @ria767-lab
-- Eaint Kyar Phyu Linn — @Eaint-kpl
-- Chit Myat Noe — @6705142017-CMN
-- Hnin Ei Ei Win — @winniehnin
-- Aung Thet Khine — @AungThetKhine21
+- Ria — @ria767-lab , 6705142022
+- Eaint Kyar Phyu Linn — @Eaint-kpl , 6705142010
+- Chit Myat Noe — @6705142017-CMN , 6705142017
+- Hnin Ei Ei Win — @winniehnin ,6705142036
+- Aung Thet Khine — @AungThetKhine21 ,6705142032
