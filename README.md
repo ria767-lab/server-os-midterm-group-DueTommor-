@@ -4,7 +4,7 @@ Server Operating System Midterm Project - DNS and DHCP Troubleshooting
 
 ## Group Information
 
-- Group name: DueTomorrow
+- Group name: DueTommor
 - Company / domain: NovaPeak / novapeak.lab
 
 
