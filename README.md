@@ -6,7 +6,7 @@ Server Operating System Midterm Project - DNS and DHCP Troubleshooting
 
 - Group name: DueTomorrow
 - Company / domain: NovaPeak / novapeak.lab
-- Checker Group ID: lab01
+
 
 ## Group Members
 
