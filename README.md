@@ -16,6 +16,7 @@ Server Operating System Midterm Project - DNS and DHCP Troubleshooting
 - Hnin Ei Ei Win — @winniehnin ,6705142036
 - Aung Thet Khine — @AungThetKhine21 ,6705142032
 
+
 ## Member Contributions
 
 All group members participated in the Killercoda lab tasks and contributed to the troubleshooting and verification process. The following table summarizes each member's main responsibilities.
@@ -28,6 +29,7 @@ All group members participated in the Killercoda lab tasks and contributed to th
 | Hnin Ei Ei Win (@winniehnin) | Worked on Faults 3 and 4: the API DNS record and DHCP DNS configuration. |
 | Eaint Kyar Phyu Linn (@Eaint-kpl) | Prepared and improved the README and checked the repository for documentation errors and inconsistencies. |
 
+
 ## Project Overview
 
 This project focuses on diagnosing and repairing DNS and DHCP services in a simulated company network as part of the Server Operating System midterm.
@@ -37,3 +39,14 @@ The goal is to ensure that a client joining the network without manual configura
 The group investigated network and configuration problems, collected command outputs as evidence, applied repairs, and verified the results using the client-side grading checker.
 
 The project also includes an incident log documenting the troubleshooting process and an AI critique evaluating the usefulness and limitations of AI-assisted troubleshooting.
+
+
+## Repository Structure
+
+- `fixed-configs/` — Repaired DNS and DHCP configuration files.
+- `evidence/` — Before-and-after configurations and diagnostic outputs.
+- `README.md` — Project overview, group information, and member contributions.
+- `INCIDENT_LOG.md` — Diagnosis, proof, fixes, and verification for each fault.
+- `AI_CRITIQUE.md` — AI usage declaration, comparison, and evaluation.
+- `session.log` — Recorded terminal session.
+- `checker_result.txt` — Final grading checker results.
