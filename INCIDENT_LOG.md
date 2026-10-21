@@ -191,7 +191,7 @@
   We also updated the zone serial number:
 
   ```
-  sed -i 's/2024010101/2026101401/' /etc/bind/db.novapeak.lab
+  sed -i 's/2024010101/2024010102/' /etc/bind/db.novapeak.lab
   ```
 
   Then we checked the DNS configuration and restarted the DNS service.
