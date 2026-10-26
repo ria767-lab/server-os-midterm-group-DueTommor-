@@ -1,6 +1,6 @@
 # AI Usage and Critique
 
-Group: DueTomorrow
+Group: DueTomorr-
 
 Members:
 
