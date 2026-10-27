@@ -1,7 +1,8 @@
 
 # Incident Log
 
-**Group:** [DueTomorrow]  
+**Group:** DueTommor
+
 **Members:** [ Ria-6705142022 ], [Eaint Kyar Phyu Linn-6705142010], [Chit Myat Noe-6705142017], [Hnin Ei Ei Win-6705142036], [Aung Thet Khine-6705142032]  
 **Company / domain:** NovaPeak / novapeak.lab
 
@@ -182,23 +183,17 @@
 
 - **Fix (what we changed):**
 
-  We changed the API A record from `192.168.19.1` to `192.168.19.40` using the following command:
+  We changed the API A record from `192.168.19.1` to `192.168.19.40` and increased the zone serial from `2024010101` to `2024010102` using the recorded command:
 
   ```
-  sed -i 's/^api IN A 192\.168\.19\.1$/api IN A 192.168.19.40/' /etc/bind/db.novapeak.lab
+  sed -i 's/api IN A 192.168.19.1$/api IN A 192.168.19.40/; s/2024010101/2024010102/' /etc/bind/db.novapeak.lab
   ```
 
-  We also updated the zone serial number:
+  Then we validated the forward zone and reloaded the DNS service.
 
   ```
-  sed -i 's/2024010101/2024010102/' /etc/bind/db.novapeak.lab
-  ```
-
-  Then we checked the DNS configuration and restarted the DNS service.
-
-  ```
-  named-checkconf -z
-  systemctl restart named
+  named-checkzone novapeak.lab /etc/bind/db.novapeak.lab
+  systemctl reload named
   ```
 
 - **Confirmation (output showing it now works):**
@@ -215,12 +210,12 @@
 
   After the firewall issue was also resolved, we tested the API DNS record using:
 
-  `dig @192.168.19.10 api.novapeak.lab +short`
+  `ip netns exec client dig @192.168.19.10 api.novapeak.lab +noall +answer`
 
   Output:
 
   ```
-  192.168.19.40
+  api.novapeak.lab. 3600 IN A 192.168.19.40
   ```
 
   The API hostname successfully resolved to the correct IP address. The final grading checker also confirmed that all four A records were correct.
